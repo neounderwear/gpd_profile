@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gpd_web/navigation/widget/header_nav.dart';
 import 'package:gpd_web/section/contact/contact_web.dart';
-import 'package:gpd_web/section/handkerchief/handkerchief_web.dart';
+import 'package:gpd_web/section/testimony/testimony.dart';
 import 'package:gpd_web/section/info/info_web.dart';
 import 'package:gpd_web/section/landing_page/landing_page_web.dart';
-import 'package:gpd_web/section/sock/sock_web.dart';
-import 'package:gpd_web/section/underwear/underwear_web.dart';
+import 'package:gpd_web/section/product/product_web.dart';
 
 class WebPageNavigation extends StatefulWidget {
   const WebPageNavigation({super.key});
@@ -61,22 +60,17 @@ class _WebPageNavigationState extends State<WebPageNavigation> {
           SizedBox(width: size.width * 0.01),
           HeaderNav(
             onPressed: () => scrollToSection(section3Key),
-            label: 'Underwear',
+            label: 'Produk',
           ),
           SizedBox(width: size.width * 0.01),
           HeaderNav(
             onPressed: () => scrollToSection(section4Key),
-            label: 'Kaos Kaki',
+            label: 'Testimoni',
           ),
           SizedBox(width: size.width * 0.01),
           HeaderNav(
             onPressed: () => scrollToSection(section5Key),
-            label: 'Saputangan',
-          ),
-          SizedBox(width: size.width * 0.01),
-          HeaderNav(
-            onPressed: () => scrollToSection(section6Key),
-            label: 'Contact Us',
+            label: 'Kontak',
           ),
         ],
       ),
@@ -86,10 +80,9 @@ class _WebPageNavigationState extends State<WebPageNavigation> {
           children: [
             LandingPageWeb(globalKey: section1Key),
             InfoWeb(globalKey: section2Key),
-            UnderwearWeb(globalKey: section3Key),
-            SockWeb(globalKey: section4Key),
-            HandkerchiefWeb(globalKey: section5Key),
-            ContactWeb(globalKey: section6Key),
+            ProductWeb(globalKey: section3Key),
+            TestimonyWeb(globalKey: section4Key),
+            ContactWeb(globalKey: section5Key),
           ],
         ),
       ),

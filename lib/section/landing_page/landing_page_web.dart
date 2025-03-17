@@ -22,8 +22,7 @@ class LandingPageWeb extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
               children: [
-                Flexible(
-                  flex: 1,
+                Expanded(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +49,12 @@ class LandingPageWeb extends StatelessWidget {
                     ],
                   ),
                 ),
-                Flexible(flex: 1, child: Text('Gambar')),
+                Expanded(
+                  child: Image.network(
+                    'assets/images/underwear.png',
+                    height: size.height * 3,
+                  ),
+                ),
               ],
             ),
           ),
@@ -72,6 +76,7 @@ class LandingPageWeb extends StatelessWidget {
                 color: Colors.white,
                 fontStyle: FontStyle.italic,
               ),
+              textAlign: TextAlign.center,
             ),
           ),
         ],
