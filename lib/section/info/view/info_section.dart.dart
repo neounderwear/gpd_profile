@@ -60,7 +60,7 @@ class InfoSection extends StatelessWidget {
         const SizedBox(width: 12.0),
         Expanded(
           child: SizedBox(
-            height: size.height * 0.3,
+            height: size.height * 0.4,
             child: Column(
               children: [
                 Text(
@@ -84,11 +84,8 @@ class InfoSection extends StatelessWidget {
 
   Widget _buildFirstSectionMobile(Size size) {
     return Column(
-      crossAxisAlignment:
-          CrossAxisAlignment.stretch, // Menjadikan konten selebar parent
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        // Menggunakan PictureCard langsung tanpa wrapper SizedBox
-        // Karena PictureCard sudah dimodifikasi untuk menggunakan double.infinity pada mobile
         PictureCard(
           size: size,
           label: 'Toko Offline',
