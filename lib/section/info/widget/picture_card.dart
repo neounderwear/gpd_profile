@@ -36,7 +36,7 @@ class PictureCard extends StatelessWidget {
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
-            child: Image.network(imageUrl, fit: BoxFit.cover),
+            child: Image.asset(imageUrl, fit: BoxFit.cover),
           ),
         ),
         Padding(
